@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "assets#index"
   resources :assets
 
   # The priority is based upon order of creation: first created -> highest priority.
