@@ -13,7 +13,8 @@
   <b>assets:</b>
   <ul>
     <% @post.weblogAssets.each do |weblogAsset|%>
-      <li><%= weblogAsset.data.url%></li>
+      <li><%= image_tag weblogAsset.data.url%></li>
+
       <% end %>
     </ul>
 </p>
