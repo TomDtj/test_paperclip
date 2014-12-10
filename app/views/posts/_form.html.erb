@@ -1,0 +1,30 @@
+<%= form_for(@post,:html => {:multipart => true}) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <%=f.fields_for :weblogAssets do |weblogAsset_form| %>
+    <div class="asset field">
+      <%= weblogAsset_form.file_field :data %>
+    </div>
+  <%end%>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
