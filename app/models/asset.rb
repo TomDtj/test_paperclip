@@ -8,4 +8,6 @@ class Asset < ActiveRecord::Base
       :position => 'Center'
     }
   }
+  validates_attachment_content_type :data, :content_type => %w(image/jpeg image/jpg image/png)
+  
 end
