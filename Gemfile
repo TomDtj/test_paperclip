@@ -39,4 +39,5 @@ gem 'spring',        group: :development
 #gem 'debugger', group: [:development, :test]
 
 gem 'paperclip'
-gem 'pry-rails'
+gem 'pry-rails',group: [:development, :test]
+gem 'pry-nav',group: [:development, :test]
