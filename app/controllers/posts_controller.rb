@@ -18,6 +18,8 @@ class PostsController < ApplicationController
     @post.weblogAssets.build
     @post.weblogAssets.build
     @post.weblogAssets.build
+    binding.pry
+    
     respond_to do |format|
       format.html
       format.xml{ render :xml =>@post}

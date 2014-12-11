@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 
 gem 'paperclip'
 gem 'pry-rails',group: [:development, :test]
-gem 'pry-nav',group: [:development, :test]
+gem 'pry-byebug',group: [:development, :test]
+gem 'pry-stack_explorer',group: [:development, :test]
