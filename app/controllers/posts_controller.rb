@@ -18,7 +18,6 @@ class PostsController < ApplicationController
     @post.weblogAssets.build
     @post.weblogAssets.build
     @post.weblogAssets.build
-    debugger
     respond_to do |format|
       format.html
       format.xml{ render :xml =>@post}
@@ -34,6 +33,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     logger.debug "------------------------------Post attributes hash: #{@post.attributes.inspect}"
+    binding.pry
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
